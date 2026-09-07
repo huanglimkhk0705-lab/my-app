@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Hiragino Sans', 'Meiryo', sans-serif;
+    /*background: linear-gradient(135deg, #6a5acd, #1e90ff);*/
+    background-image: url(p_new0258_s_new02583.jpg);
+    background-repeat: repeat;
+    background-seize: 100px 100px;
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* �肢�{�^�� */
+.fortune-btn {
+    padding: 15px 40px;
+    font-size: 20px;
+    border: none;
+    border-radius: 40px;
+    /*background: #ffcc00;*/
+    color: #333;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.fortune-btn:hover {
+    transform: scale(1.05);
+}
+
+/* �肢���ʂ̘g */
+.fortune-card {
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    color: #333;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.6s forwards;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ���ʂ̕��� */
+#fortuneResult {
+	margin-top:0px;
+	text-align:center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* ���b�L�[�A�C�e���E�J���[�̘g�E���� */
+.box1{
+	margin-top:20px;
+    color: #565656;
+    background: #ffeaea;
+    box-shadow: 0px 0px 0px 8px #ffeaea;
+    border: dashed 2px #ffc3c3;
+    border-radius: 8px;
+}
+
+.box1 .box1_title {
+    font-size: 15px;
+    background: #ffc3c3;
+    padding: 2px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+
+.item {
+	text-align:center;
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+.color{
+	text-align:center;
+	font-size: 15px;
+	opacity: 0.8;
+}
+
+
+/* �A�j���[�V���� */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ======================= */
+/* レスポンシブ対応の実装 */
+/* ======================= */
+
+/* タブレットサイズ以下 (768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* 全体のフォントサイズを縮小 */
+    }
+
+    .container {
+        width: 100%; /* コンテナの幅を画面いっぱいにする */
+        max-width: none; /* 最大幅の制限を解除 */
+    }
+
+    h1 {
+        font-size: 24px; /* タイトルのフォントサイズを小さくする */
+        margin-bottom: 20px; /* タイトルの下余白を調整 */
+    }
+
+    .fortune-card {
+        margin-top: 15px; /* カードの上余白を狭める */
+        padding: 15px; /* カードの内側余白を縮小 */
+        font-size: 16px; /* カード内の文字サイズを小さくする */
+    }
+
+    .fortune-btn {
+        padding: 10px 30px; /* ボタンのパディングを小さくする */
+        font-size: 18px; /* ボタンの文字サイズを小さくする */
+    }
+
+    #fortuneResult {
+        font-size: 24px; /* 結果テキストのフォントサイズを調整 */
+        margin-top: 5px; /* 結果テキストの上余白をさらに狭める */
+    }
+}
+
+/* スマートフォンサイズ以下 (480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px; /* タイトルのフォントサイズをさらに小さくする */
+    }
+
+    .fortune-card {
+        padding: 10px; /* カードの内側余白をさらに縮小 */
+        font-size: 14px; /* カード内の文字サイズをさらに小さくする */
+    }
+
+    .fortune-btn {
+        padding: 8px 20px; /* ボタンのパディングをさらに小さくする */
+        font-size: 16px; /* ボタンの文字サイズをさらに小さくする */
+    }
+
+    #fortuneResult {
+        font-size: 20px; /* 結果テキストのフォントサイズをさらに調整 */
+    }
+}
